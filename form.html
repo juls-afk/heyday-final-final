@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contact.css" />
+    <title>Message Us</title>
+
+    <style>
+      body {
+        background-color: #212020;
+        background-image: url(food_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <img src="logo.png" alt="HeyDay Cafe Logo" />
+        <h4 class="nav-text">HEYDAY</h4>
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="prodList.html">PRODUCTS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="prodList.html">EVENTS</a></li>
+        </ul>
+        <div class="icons">
+          <i class="fa-regular fa-user fa-lg" style="color: #fff8e8"></i>
+          <i class="fa-solid fa-mug-hot fa-lg" style="color: #fff8e8"></i>
+        </div>
+      </div>
+    </header>
+    <form>
+      <div class="form-container">
+        <div class="exit-container">
+          <a href="contact.html">
+            <img src="exit.png" id="exit" width="20" alt="Exit" />
+          </a>
+        </div>
+        <div class="form-column">
+          <h1>SEND US YOUR INQUIRIES</h1>
+
+          <div>
+            <label for="name">NAME:</label>
+            <input type="text" id="name" required />
+          </div>
+
+          <div>
+            <label for="email">EMAIL:</label>
+            <input type="text" id="email" required />
+          </div>
+        </div>
+
+        <div class="form-column">
+          <div>
+            <label for="subject">SUBJECT:</label>
+            <input type="text" id="subject" required />
+          </div>
+
+          <div>
+            <label for="msg">MESSAGE:</label>
+            <textarea id="msg" required></textarea>
+          </div>
+
+          <div class="submission-reply">
+            <span id="text-response"></span>
+            <button type="submit">SUBMIT</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="script.js"></script>
+
+    <footer>
+      <p>&copy; 2024 HeyDay Cafe. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

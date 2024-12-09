@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Information</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Personal Information</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="firstName">First Name: </label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter your first name"
+            required
+          />
+          <div id="firstNameError" class="error"></div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="lastName">Last Name: </label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Enter your last name"
+            required
+          />
+          <div id="lastNameError" class="error"></div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="contact">Contact Number: </label>
+          <input
+            type="text"
+            id="contact"
+            name="contact"
+            placeholder="09 or +63"
+            required
+          />
+          <div id="contactError" class="error"></div>
+        </div>
+
+
+        <h2>Address Information</h2>
+        <div class="form-group">
+          <label for="streetAddress">Street Address: </label>
+          <input
+            type="text"
+            id="streetAddress"
+            name="streetAddress"
+            placeholder="Enter your street address"
+            required
+          />
+          <div id="streetAddressError" class="error"></div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="city">City: </label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="Enter your city"
+            required
+          />
+          <div id="cityError" class="error"></div>
+        </div>
+
+
+        <h2>Account Information</h2>
+        <div class="form-group">
+          <label for="email">Email: </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <div id="emailError" class="error"></div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="username">Username: </label>
+          <input
+            type="text"
+            id="username"
+            size="14"
+            placeholder="Enter your username"
+            required
+          />
+          <div id="usernameError" class="error"></div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="password">Password: </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter a password"
+            required
+          />
+          <div id="passwordError" class="error"></div>
+        </div>
+
+
+        <div class="button-container">
+          <button type="submit">Submit</button>
+          <button type="reset" value="Reset">Reset</button>
+        </div>
+      </form>
+    </div>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("#registrationForm");
+
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+
+          const namePattern = /^[a-zA-Z ,.'-]+$/;
+          const contactPattern = /^(09|\+639)\d{9}$/;
+          const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          const passwordPattern =
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+          const usernamePattern = /^[a-zA-Z0-9_]{3,16}$/;
+          const streetPattern = /^[a-zA-Z0-9\s,'-]{5,}$/;
+          const cityPattern = /^[a-zA-Z\s,'-]{2,}$/;
+
+
+          const errors = document.querySelectorAll(".error");
+          errors.forEach((error) => (error.textContent = ""));
+
+
+          const firstName = form.firstName.value.trim();
+          const lastName = form.lastName.value.trim();
+          const contact = form.contact.value.trim();
+          const email = form.email.value.trim();
+          const username = form.username.value.trim();
+          const password = form.password.value.trim();
+          const streetAddress = form.streetAddress.value.trim();
+          const city = form.city.value.trim();
+
+
+          let valid = true;
+
+
+          if (!namePattern.test(firstName)) {
+            document.getElementById("firstNameError").textContent =
+              "First name is invalid.";
+            valid = false;
+          }
+          if (!namePattern.test(lastName)) {
+            document.getElementById("lastNameError").textContent =
+              "Last name is invalid.";
+            valid = false;
+          }
+
+
+          if (!contactPattern.test(contact)) {
+            document.getElementById("contactError").textContent =
+              "Please enter a valid contact number (09 or +63).";
+            valid = false;
+          }
+
+
+          if (!emailPattern.test(email)) {
+            document.getElementById("emailError").textContent =
+              "Please enter a valid email address.";
+            valid = false;
+          }
+
+
+          if (!usernamePattern.test(username)) {
+            document.getElementById("usernameError").textContent =
+              "Username must be 3-16 characters, with letters, numbers, or underscores.";
+            valid = false;
+          }
+
+
+          if (!passwordPattern.test(password)) {
+            document.getElementById("passwordError").textContent =
+              "Password must be at least 8 characters long and include uppercase, lowercase, a number, and a special character.";
+            valid = false;
+          }
+
+
+          if (!streetPattern.test(streetAddress)) {
+            document.getElementById("streetAddressError").textContent =
+              "Street address is invalid. Must be at least 5 characters.";
+            valid = false;
+          }
+
+
+          if (!cityPattern.test(city)) {
+            document.getElementById("cityError").textContent =
+              "City name is invalid. Must be at least 2 characters.";
+            valid = false;
+          }
+
+
+          if (valid) {
+            alert("Form submitted successfully!");
+          }
+        });
+      });
+    </script>
+
+
+    <style>
+      body {
+        font-family: "Inter";
+        background-image: url(account-info-bg.png);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        padding: 20px;
+        margin: 0;
+      }
+
+
+      .form-container {
+        background-color: #fffbf3;
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 2px solid #3d2e28;
+      }
+
+
+     
+
+
+      h2 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #592f03;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+
+      label {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 8px;
+        color: rgb(39, 37, 37);
+        font-weight: bold;
+        margin-left: 5px;
+      }
+
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 10px;
+        border: 2px solid #7f4f24;
+        background-color: #fffbf3;
+        font-size: 14px;
+        color: #582f03;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+        border-radius: 15px;
+      }
+
+
+      input:focus {
+        outline: none;
+        border-color: #386641;
+        background-color: #f0e5d8;
+        box-shadow: 0 0 5px rgba(56, 102, 65, 0.5);
+      }
+
+
+      button {
+        flex: 1;
+        padding: 10px 15px;
+        background-color: #6a994e;
+        border: 1px solid #6a994e;
+        border-radius: 15px;
+        color: #fffbf3;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+
+      button:hover {
+        background-color: #386641;
+        border-color: #386641;
+        transform: translateY(-1px);
+      }
+
+
+      button:active {
+        background-color: #7f4f24;
+        border-color: #7f4f24;
+        transform: translateY(0);
+      }
+
+
+      .button-container {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+
+      button[type="reset"] {
+        background-color: #7f4f24;
+        border-color: #7f4f24;
+      }
+
+
+      button[type="reset"]:hover {
+        background-color: #a17f43;
+        border-color: #a17f43;
+      }
+
+
+      .error {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-style: italic;
+      }
+
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+    </style>
+  </body>
+</html>

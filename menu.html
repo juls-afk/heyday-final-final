@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeyDay Cafe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <img src="img/logo.png" alt="HeyDay Cafe Logo" />
+      <h4 class="nav-text">HEYDAY</h4>
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="prodList.html">PRODUCTS</a></li>
+        <li><a href="prodList.html">EVENTS</a></li>
+      </ul>
+      <div class="icons">
+        <i class="fa-regular fa-user fa-lg" style="color:#fff8e8;"></i>
+        <i class="fa-solid fa-mug-hot fa-lg" style="color:#fff8e8;"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container text-center">
+      <h1>HeyDay Cafe</h1>
+      <p>Sip, savor, and enjoy your heyday with us! 🌿☕</p>
+      <a href="#Signature-Drinks" id="explore-menu-btn" class="btn btn-light btn-lg" onclick="showSection('Signature-Drinks')">Explore Menu</a>
+    </div>
+  </section>
+
+  <!-- Menu List -->
+  <div class="menu-list">
+    <div class="container text-center">
+      <a href="#Signature-Drinks" onclick="showSection('Signature-Drinks')">Signature Drinks</a>
+      <a href="#Coffee" onclick="showSection('Coffee')">Coffee</a>
+      <a href="#Matcha" onclick="showSection('Matcha')">Matcha</a>
+      <a href="#Food" onclick="showSection('Food')">Food</a>
+    </div>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content">
+    <!-- Signature Drinks -->
+    <section id="Signature-Drinks" class="menu-section">
+      <h2 class="text-center mb-4">Signature Drinks</h2>
+      <div class="row">
+        <!-- Circle Items -->
+        <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('HeyDay Sunrise Drupe', 'A refreshing blend of tropical flavors. 150 calories ', 'P 165.00', 'img/hzd.jpg')">
+            <img src="img/hzd.jpg" alt="HeyDay Sunrise Drupe" class="circle-img">
+            <h5 class="circle-title">HeyDay Sunrise Drupe</h5>
+            <p class="price">P 165.00</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('Honeyzest Latte', 'A rich honey-infused latte. 200 calories ', 'P 165.00', 'img/hzl.jpg')">
+            <img src="img/hzl.jpg" alt="Honeyzest Latte" class="circle-img">
+            <h5 class="circle-title">Honeyzest Latte</h5>
+            <p class="price">P 165.00</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('Madagascar Vanilla Latte', 'A creamy vanilla experience. 250 calories', 'P 175.00', 'img/mvl.jpg')">
+            <img src="img/mvl.jpg" alt="Madagascar Vanilla Latte" class="circle-img">
+            <h5 class="circle-title">Madagascar Vanilla Latte</h5>
+            <p class="price">P 175.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coffee Section -->
+    <section id="Coffee" class="menu-section">
+      <h2 class="text-center mb-4">Coffee</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('Americano', 'A classic coffee with a bold taste. 5 calories', 'P 150.00', 'img/am.jpg')">
+            <img src="img/am.jpg" alt="Americano" class="circle-img">
+            <h5 class="circle-title">Americano</h5>
+            <p class="price">P 150.00</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('Caramel Macchiato', 'Sweet caramel meets rich espresso. 120 calories', 'P 145.00', 'img/cm.jpg')">
+            <img src="img/cm.jpg" alt="Caramel Macchiato" class="circle-img">
+            <h5 class="circle-title">Caramel Macchiato</h5>
+            <p class="price">P 145.00</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('Mocha Latte', 'A creamy chocolate-infused delight.', 'P 130.00', 'img/mocha.png')">
+            <img src="img/mocha.png" alt="Mocha Latte" class="circle-img">
+            <h5 class="circle-title">Mocha Latte</h5>
+            <p class="price">P 130.00</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('Spanish Latte', 'A latte with a touch of condensed milk sweetness. 170 calories', 'P 160.00', 'img/sl.jpg')">
+            <img src="img/sl.jpg" alt="Spanish Latte" class="circle-img">
+            <h5 class="circle-title">Spanish Latte</h5>
+            <p class="price">P 160.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Matcha Section -->
+    <section id="Matcha" class="menu-section">
+      <h2 class="text-center mb-4">Matcha</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('Matcha Latte', 'Smooth matcha with steamed milk. 140 calories', 'P 180.00', 'img/ml.jpg')">
+            <img src="img/ml.jpg" alt="Matcha Latte" class="circle-img">
+            <h5 class="circle-title">Matcha Latte</h5>
+            <p class="price">P 180.00</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('Dirty Matcha Latte', 'Matcha with a shot of espresso. 160 calories', 'P 160.00', 'img/dml.png')">
+            <img src="img/dml.png" alt="Dirty Matcha Latte" class="circle-img">
+            <h5 class="circle-title">Dirty Matcha Latte</h5>
+            <p class="price">P 160.00</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('Tiramisu Matcha Latte', 'Matcha with creamy tiramisu flavors. 200 calories', 'P 190.00', 'img/tiramisu.jpg')">
+            <img src="img/tiramisu.jpg" alt="Tiramisu Matcha Latte" class="circle-img">
+            <h5 class="circle-title">Tiramisu Matcha Latte</h5>
+            <p class="price">P 190.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food Section -->
+    <section id="Food" class="menu-section">
+      <h2 class="text-center mb-4">Food</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('Cajun Potato Wedges', 'Crispy potato wedges with Cajun seasoning. 320 calories', 'P 170.00', 'img/potato.jpg')">
+            <img src="img/potato.jpg" alt="Cajun Potato Wedges" class="circle-img">
+            <h5 class="circle-title">Cajun Potato Wedges</h5>
+            <p class="price">P 170.00</p>
+          </div>
+        </div>
+       <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('Pomodoro Ricotta', 'Fresh ricotta paired with rich tomato sauce. 400 calories', 'P 200.00', 'img/pomodoro.jpg')">
+            <img src="img/pomodoro.jpg" alt="Pomodoro Ricotta" class="circle-img"> 
+            <h5 class="circle-title">Pomodoro Ricotta</h5>
+            <p class="price">P 200.00</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="circle-menu-item" onclick="showProductModal('Lemon Garlic Pasta', 'Grilled sandwich with mozzarella and herbs. 350 calories', 'P 190.00', 'img/lemon.jpg')">
+            <img src="img/lemon.jpg" alt="Lemon Garlic Pasta" class="circle-img">
+            <h5 class="circle-title">Lemon Garlic Pasta</h5>
+            <p class="price">P 190.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- Product Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container text-center">
+          <img id="modalProductImage" class="img-fluid mb-3" alt="Product Image">
+          <p id="modalDescription" class="text-muted"></p>
+          <p id="modalCalories" class="text-muted"></p>
+          <p id="modalPrice" class="text-muted"></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="addToCheckout(document.getElementById('productModalLabel').textContent)">Add to Check Out</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Check Out Section -->
+<section id="CheckOut" class="container mt-5">
+  <h2 class="text-center">Check Out</h2>
+  <p class="text-center">Review your selected items below:</p>
+
+  <div id="checkout-items" class="container border p-4">
+    <p id="no-items" class="text-center">No items selected yet!</p>
+    <ul id="item-list" class="list-group"></ul>
+  </div>
+
+  <div class="text-center mt-4">
+    <div class="d-flex justify-content-center">
+      <button id="clear-checkout" class="btn btn-primary me-2">Check Out</button>
+    </div>
+    <!-- Message container -->
+    <p id="order-status" class="text-center mt-3" style="display: none; font-weight: bold;">Order Submitted</p>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer mt-4">
+  <div class="container text-center">
+    <p>&copy; 2024 HeyDay Cafe. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
