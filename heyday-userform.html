@@ -9,6 +9,46 @@
       rel="stylesheet"
     />
   </head>
+
+  <!---navbar--->
+  <nav class="navbar">
+    <a class="navbar-logo" href="#">
+      <img src="heyday-logo-white-transparent.png" width="30" height="30" />
+      <span>HEYDAY</span>
+    </a>
+    <div class="nav-links">
+      <ul>
+        <li>
+          <a href="#">ABOUT US</a>
+        </li>
+        <li>
+          <a href="#">MENU</a>
+        </li>
+        <li>
+          <a href="#">CONTACT</a>
+        </li>
+        <li>
+          <a href="#">GALLERY</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-toggle" id="navbar-toggle">
+      <i class="bi bi-list"></i>
+    </div>
+    <div class="navlinks-icons">
+      <div class="cart-icon">
+        <i class="bi bi-cart"> </i>
+      </div>
+
+      <div class="account-icon">
+        <a href="heyday-userform.html">
+          <i class="bi bi-person-circle"> </i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!---navbar end-->
   <body>
     <div class="form-container">
       <h2>Personal Information</h2>
@@ -226,6 +266,88 @@
 
 
     <style>
+
+      /*navbar*/
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: rgba(21, 20, 20, 0.8);
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+      }
+
+      .navbar-logo {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .navbar-logo img {
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      .navbar-logo span {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-left: auto;
+        margin-right: 30px;
+      }
+
+      .nav-links ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links ul li {
+        display: inline;
+      }
+
+      .nav-links ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links ul li a:hover {
+        color: #ffcc00;
+      }
+
+      .navlinks-icons {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .navlinks-icons i {
+        font-size: 1.2rem;
+        color: #fff;
+        transition: color 0.3s ease;
+      }
+
+      .navlinks-icons i:hover {
+        color: #ffcc00;
+      }
+
       body {
         font-family: "Inter";
         background-image: url(account-info-bg.png);
@@ -237,7 +359,6 @@
         margin: 0;
       }
 
-
       .form-container {
         background-color: #fffbf3;
         max-width: 500px;
@@ -247,10 +368,6 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         border: 2px solid #3d2e28;
       }
-
-
-     
-
 
       h2 {
         text-align: center;
@@ -353,6 +470,157 @@
       .form-group {
         margin-bottom: 20px;
       }
+
+      /*RESPONSIVENESS*/
+
+/*laptop 1440px responsiveness*/
+@media (min-width: 1440px) and (max-width: 2560px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+/*laptop 2560px responsiveness*/
+@media (min-width: 2560px) {
+  .navbar-toggle {
+    display: none;
+}
+}
+
+/*tablet responsiveness*/
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .nav-links ul {
+    list-style: none;
+    margin-left: 140px;
+    padding: 0;
+    display: flex;
+    gap: 1px;
+  }
+
+  .nav-links ul li {
+    text-align: center;
+  }
+
+  .nav-links ul li a {
+    display: block;
+    padding: 10px 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .navlinks-icons {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  .navlinks-icons i {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .navlinks-icons i:hover {
+    transform: scale(1.2);
+  }
+
+}
+
+/*phone responsiveness (w hamburger icon)*/
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .navbar-logo span {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .nav-links ul li a {
+    font-size: 0.9rem;
+    padding: 8px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .nav-links ul li a:hover {
+    background-color: #ffcc00;
+    color: #000;
+  }
+
+  .navlinks-icons {
+    display: none;
+  }
+
+  /*hamburger icon adjustments*/
+  .navbar-toggle {
+    display: block;
+    cursor: pointer;
+    z-index: 15;
+  }
+
+  .navbar-toggle i {
+    font-size: 2rem;
+    color: white;
+  }
+}
     </style>
   </body>
 </html>
