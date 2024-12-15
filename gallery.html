@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <link
+      href="gallery.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <a class="navbar-logo" href="index.html">
+            <img src="heyday-logo-white-transparent.png" width="30" height="30" />
+            <span>HEYDAY</span>
+          </a>
+          <div class="nav-links">
+            <ul>
+              <li>
+                <a href="#">ABOUT US</a>
+              </li>
+              <li>
+                <a href="#">MENU</a>
+              </li>
+              <li>
+                <a href="#">CONTACT</a>
+              </li>
+              <li>
+                <a href="#">GALLERY</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-toggle" id="navbar-toggle">
+            <i class="bi bi-list"></i>
+          </div>
+          <div class="navlinks-icons">
+          <div class="cart-icon">
+            <i class="bi bi-cart"> </i>
+          </div>
+          
+          <div class="account-icon">
+            <a href="heyday-userform.html">
+            <i class="bi bi-person-circle"> </i>
+          </a>
+          </div>
+          </div>
+        </nav>
+
+    <!--carousel-->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+            
+            <!--first slide-->
+              <div class="carousel-item active">
+                <img src="art-markets.JPG" class="d-block w-100" alt="First Slide">
+                <div class="carousel-caption d-block">
+                  <h5>Join Us!</h5>
+                  <p>Explore unique creations, meet talented artists, and find your next masterpiece.</p>
+                </div>
+              </div>
+            
+              <!--second slide-->
+              <div class="carousel-item">
+                <img src="wet-market.JPG" class="d-block w-100" alt="Second Slide">
+                <div class="carousel-caption d-block">
+                  <h5>Artists' Abode: Your Creative Space</h5>
+                  <p>Commission, create, and sell — turn your vision into a masterpiece for buyers to cherish.</p>
+                </div>
+              </div>
+
+              <!--third slide-->
+              <div class="carousel-item">
+                <img src="heyday-first-slide.jpg" class="d-block w-100" alt="Fourth Slide">
+                <div class="carousel-caption d-block">
+                  <h5>Only Here at Heyday.</h5>
+                  <p>For moments that deserve to be remembered, for experiences that stand out from the rest.</p>
+                </div>
+              </div>
+
+        <!--controls-->
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+
+          <main class="mt-5">
+            <div class="container">
+
+              <!--section content-->
+              <section>
+                <div class="row">
+                  <div class="col-md-6 gx-5 mb-4">
+                    <div class="bg-image hover-overlay shadow-2-strong" data-mdb-ripple-init data-mdb-ripple-color="light">
+                      <img src="heyday-section.jpg" class="img-fluid" />
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                      </a>
+                    </div>
+                  </div>
+          
+                  <div class="col-md-6 gx-5 mb-4">
+                    <h4><strong>Heyday Offers More!</strong></h4>
+                    <p class="text-muted">
+                        At Heyday, we offer more than just great food and drinks—we’re your go-to spot for unforgettable experiences! Whether it's a lively event, a celebration, or a casual night out, we create the perfect atmosphere for making memories. From live music to special gatherings, we’re all about bringing people together.
+                    </p>
+                    <p><strong>Why Choose Us?</strong></p>
+                    <p class="text-muted">
+                        Because we deliver exceptional service, a welcoming atmosphere, and a menu that keeps you coming back for more. At Heyday, it's not just about what you eat or drink—it’s about the experience.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+          <hr class="my-5" />
+
+    <!--section content-->
+    <section class="text-center">
+      <h4 class="mb-5"><strong>More of our Events and Services</strong></h4>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4">
+          <div class="card h-100">
+            <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+              <img src="kpop-events.PNG" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">K-pop Events</h5>
+              <p class="card-text">
+                From fan conventions to idol celebrations, we host exciting fan-led events that brings the K-pop community together!
+              </p>
+              <a href="#!" class="btn custom-btn" data-mdb-ripple-init>Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+              <img src="open-mic.JPG" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Open Mic Sessions</h5>
+              <p class="card-text">
+                Step into the spotlight, whether it’s music or poetry, share your talent in a welcoming space and connect with others.
+              </p>
+              <a href="#!" class="btn custom-btn" data-mdb-ripple-init>Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+              <img src="freedom-wall.PNG" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Freedom Wall</h5>
+              <p class="card-text">
+                Express yourself on Heyday’s Freedom Wall! Write, draw, or share whatever’s on your mind—no limits, just pure freedom.
+              </p>
+              <a href="#!" class="btn custom-btn" data-mdb-ripple-init>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+        <div class="text-center p-3">
+            © 2024 Copyright Heyday Cafe
+        </div>
+    </footer>
+
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>      
+</body>
+</html>
