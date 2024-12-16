@@ -9,7 +9,7 @@
     <style>
       body {
         background-color: #212020;
-        background-image: url(bg.png);
+        background-image: url(img/bg.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -18,23 +18,42 @@
   </head>
   <body>
     <header>
-      <div class="navbar">
-        <img src="logo.png" alt="HeyDay Cafe Logo" />
-
-        <h4 class="nav-text">HEYDAY</h4>
-        <ul>
-          <li><a href="home.html">HOME</a></li>
-          <li><a href="about.html">ABOUT US</a></li>
-          <li><a href="prodList.html">PRODUCTS</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-          <li><a href="prodList.html">EVENTS</a></li>
-        </ul>
-
-        <div class="icons">
-          <i class="fa-regular fa-user fa-lg" style="color: #fff8e8"></i>
-          <i class="fa-solid fa-mug-hot fa-lg" style="color: #fff8e8"></i>
+      <nav class="navbar">
+        <a class="navbar-logo" href="#">
+          <img src="img/logo.png" width="40" height="30" />
+          <span>HEYDAY</span>
+        </a>
+        <div class="nav-links">
+          <ul>
+            <li>
+              <a href="about.html">ABOUT US</a>
+            </li>
+            <li>
+              <a href="menu.html">MENU</a>
+            </li>
+            <li>
+              <a href="contact.html">CONTACT</a>
+            </li>
+            <li>
+              <a href="#">GALLERY</a>
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="navbar-toggle" id="navbar-toggle">
+          <i class="bi bi-list"></i>
+        </div>
+        <div class="navlinks-icons">
+          <div class="cart-icon">
+            <i class="bi bi-cart"> </i>
+          </div>
+
+          <div class="account-icon">
+            <a href="heyday-userform.html">
+              <i class="bi bi-person-circle"> </i>
+            </a>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <h1 class="hdr">
@@ -50,7 +69,7 @@
       </p>
       <section>
         <div>
-          <img src="tel_icon.png" alt="Telephone icon" width="48" height="47" />
+          <img src="img/tel_icon.png" alt="Telephone icon" width="48" height="47" />
           <div class="contact-text">
             <h4>CALL US</h4>
             <p>0270011609</p>
@@ -58,7 +77,7 @@
         </div>
 
         <div>
-          <img src="email_icon.png" alt="Email icon" width="45" height="35" />
+          <img src="img/email_icon.png" alt="Email icon" width="45" height="35" />
           <div class="contact-text">
             <h4>EMAIL US</h4>
             <p>admin@heydaycafebar.com</p>
@@ -66,7 +85,7 @@
         </div>
 
         <div>
-          <img src="fb_icon.png" alt="Facebook icon" width="48" height="47" />
+          <img src="img/fb_icon.png" alt="Facebook icon" width="48" height="47" />
           <div class="contact-text">
             <h4>CHECK OUR FB</h4>
             <p>Heyday Cafe</p>
@@ -74,32 +93,32 @@
         </div>
 
         <div>
-          <img src="ig_icon.png" alt="Instagram icon" width="48" height="47" />
+          <img src="img/ig_icon.png" alt="Instagram icon" width="48" height="47" />
           <div class="contact-text">
             <h4>CHECK OUR IG</h4>
             <p>heydaycafe_</p>
           </div>
         </div>
+
+        <img
+          src="img/coffee_machine.jpg"
+          id="coffee_machine"
+          alt="heyday coffee"
+          width="670"
+          height="824"
+        />
       </section>
 
       <button><a href="form.html">INQUIRE HERE</a></button>
     </div>
 
-    <img
-      src="coffee_machine.jpg"
-      id="coffee_machine"
-      alt="heyday coffee"
-      width="670"
-      height="824"
-    />
-
     <div class="Location-Container">
-      <img src="map.jpg" id="map" alt="Heyday Map" />
+      <img src="img/map.jpg" id="map" alt="Heyday Map" />
 
       <section>
         <h2>VISIT US TODAY!</h2>
         <div class="location-info">
-          <img src="loc_icon.png" width="55" />
+          <img src="img/loc_icon.png" width="55" />
           <div class="location-text">
             <h3>LOCATION</h3>
             <p>1070 Tolentino St, Sampaloc, Manila, 1008 Metro Manila</p>
@@ -107,7 +126,7 @@
         </div>
 
         <div class="location-info">
-          <img src="opening_icon.png" width="48" />
+          <img src="img/opening_icon.png" width="48" />
           <div class="location-text">
             <h3>OPENING HOURS</h3>
             <p>
