@@ -9,7 +9,7 @@
     <style>
       body {
         background-color: #212020;
-        background-image: url(food_bg.jpg);
+        background-image: url(img/food_bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -18,27 +18,48 @@
   </head>
   <body>
     <header>
-      <div class="navbar">
-        <img src="logo.png" alt="HeyDay Cafe Logo" />
-        <h4 class="nav-text">HEYDAY</h4>
-        <ul>
-          <li><a href="home.html">HOME</a></li>
-          <li><a href="about.html">ABOUT US</a></li>
-          <li><a href="prodList.html">PRODUCTS</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-          <li><a href="prodList.html">EVENTS</a></li>
-        </ul>
-        <div class="icons">
-          <i class="fa-regular fa-user fa-lg" style="color: #fff8e8"></i>
-          <i class="fa-solid fa-mug-hot fa-lg" style="color: #fff8e8"></i>
+      <nav class="navbar">
+        <a class="navbar-logo" href="#">
+          <img src="img/logo.png" width="40" height="30" />
+          <span>HEYDAY</span>
+        </a>
+        <div class="nav-links">
+          <ul>
+            <li>
+              <a href="#">ABOUT US</a>
+            </li>
+            <li>
+              <a href="#">MENU</a>
+            </li>
+            <li>
+              <a href="contact.html">CONTACT</a>
+            </li>
+            <li>
+              <a href="#">GALLERY</a>
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="navbar-toggle" id="navbar-toggle">
+          <i class="bi bi-list"></i>
+        </div>
+        <div class="navlinks-icons">
+          <div class="cart-icon">
+            <i class="bi bi-cart"> </i>
+          </div>
+
+          <div class="account-icon">
+            <a href="heyday-userform.html">
+              <i class="bi bi-person-circle"> </i>
+            </a>
+          </div>
+        </div>
+      </nav>
     </header>
     <form>
       <div class="form-container">
         <div class="exit-container">
           <a href="contact.html">
-            <img src="exit.png" id="exit" width="20" alt="Exit" />
+            <img src="img/exit.png" id="exit" width="20" alt="Exit" />
           </a>
         </div>
         <div class="form-column">
