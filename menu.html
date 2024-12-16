@@ -12,23 +12,52 @@
 
 <body>
     <header>
-      <div class="navbar">
-        <img src="img/heyday-logo-white-transparent.png" alt="HeyDay Cafe Logo" />
-        <h4 class="nav-text">HEYDAY</h4>
-        <ul>
-          <li><a href="home.html">HOME</a></li>
-          <li><a href="about.html">ABOUT US</a></li>
-          <li><a href="prodList.html">PRODUCTS</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-          <li><a href="prodList.html">EVENTS</a></li>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(218, 181, 149, 0.884);">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="img/heyday-logo-white-transparent.png" alt="HeyDay Cafe Logo" height="50">
+        <span style="color: #fff8e8; font-weight: bold; font-size: 20px;">HEYDAY</span>
+      </a>
+      
+      <!-- Toggler for Mobile View -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="about.html">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="prodList.html">PRODUCTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="contact.html">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="prodList.html">EVENTS</a>
+          </li>
         </ul>
 
-        <div class="icons">
-          <i class="fa-regular fa-user fa-lg" style="color: #fff8e8"></i>
-          <i class="fa-solid fa-mug-hot fa-lg" style="color: #fff8e8"></i>
+        <!-- Icons -->
+        <div class="d-flex ms-3">
+          <a href="#" class="nav-link text-white">
+            <i class="fa-regular fa-user fa-lg"></i>
+          </a>
+          <a href="#" class="nav-link text-white">
+            <i class="fa-solid fa-mug-hot fa-lg"></i>
+          </a>
         </div>
       </div>
-    </header>
+    </div>
+  </nav>
+</header>
 
   <!-- Hero Section -->
   <section class="hero-section">
@@ -60,8 +89,8 @@
           <p class="price">P 165.00</p>
           <p class="calories">A refreshing blend of tropical flavors. 150 calories</p>
           <div class="quantity-controls">
-            <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
             <input type="number" class="quantity" value="0" min="0" readonly />
+          <button class="btn btn-add-to-cart" onclick="addToCart('HeyDay Sunrise Drupe', 165)">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -72,8 +101,8 @@
           <p class="price">P 165.00</p>
           <p class="calories">A rich honey-infused latte. 200 calories</p>
           <div class="quantity-controls">
-            <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
             <input type="number" class="quantity" value="0" min="0" readonly />
+          <button class="btn btn-add-to-cart" onclick="addToCart('Honeyzest Latte', 165)">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -84,9 +113,8 @@
           <p class="price">P 175.00</p>
           <p class="calories">A creamy vanilla experience. 250 calories</p>
           <div class="quantity-controls">
-            <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
             <input type="number" class="quantity" value="0" min="0" readonly />
-          </div>
+          <button class="btn btn-add-to-cart" onclick="addToCart('Madagascar Vanilla Latte', 175)">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -103,8 +131,8 @@
           <p class="price">P 150.00</p>
           <p class="calories">A classic coffee with a bold taste. 5 calories</p>
           <div class="quantity-controls">
-            <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
             <input type="number" class="quantity" value="0" min="0" readonly />
+          <button class="btn btn-add-to-cart" onclick="addToCart('Americano', 150)">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -115,8 +143,8 @@
           <p class="price">P 145.00</p>
           <p class="calories">Sweet caramel meets rich espresso. 120 calories</p>
           <div class="quantity-controls">
-            <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
             <input type="number" class="quantity" value="0" min="0" readonly />
+          <button class="btn btn-add-to-cart" onclick="addToCart('Caramel Macchiato', 145)">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -127,8 +155,8 @@
           <p class="price">P 130.00</p>
           <p class="calories">A creamy chocolate-infused delight. Varies</p>
           <div class="quantity-controls">
-            <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
             <input type="number" class="quantity" value="0" min="0" readonly />
+          <button class="btn btn-add-to-cart" onclick="addToCart('Mocha Latte', 130)">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -139,8 +167,8 @@
           <p class="price">P 160.00</p>
           <p class="calories">A latte with a touch of condensed milk sweetness. 170 calories</p>
           <div class="quantity-controls">
-            <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
             <input type="number" class="quantity" value="0" min="0" readonly />
+          <button class="btn btn-add-to-cart" onclick="addToCart('Spanish Latte', 160)">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -158,8 +186,8 @@
           <p class="price">P 180.00</p>
           <p class="calories">Smooth matcha with steamed milk. 140 calories</p>
           <div class="quantity-controls">
-            <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
             <input type="number" class="quantity" value="0" min="0" readonly />
+          <button class="btn btn-add-to-cart" onclick="addToCart('Matcha Latte', 180)">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -170,8 +198,8 @@
           <p class="price">P 160.00</p>
           <p class="calories">Matcha with a shot of espresso. 160 calories</p>
           <div class="quantity-controls">
-            <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
             <input type="number" class="quantity" value="0" min="0" readonly />
+          <button class="btn btn-add-to-cart" onclick="addToCart('Dirty Matcha Latte', 160)">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -182,8 +210,8 @@
           <p class="price">P 190.00</p>
           <p class="calories">Matcha with creamy tiramisu flavors. 200 calories</p>
           <div class="quantity-controls">
-            <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
             <input type="number" class="quantity" value="0" min="0" readonly />
+          <button class="btn btn-add-to-cart" onclick="addToCart('Tiramisu Matcha Latte', 190)">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -202,8 +230,8 @@
         <p class="price">P 170.00</p>
         <p class="calories">Crispy potato wedges with Cajun seasoning. 320 calories</p>
         <div class="quantity-controls">
-         <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
-          <input type="number" class="quantity" value="0" min="0" readonly />
+         <input type="number" class="quantity" value="0" min="0" readonly />
+          <button class="btn btn-add-to-cart" onclick="addToCart('Cajun Potato Wedges', 170)">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -215,8 +243,8 @@
         <p class="price">P 200.00</p>
         <p class="calories">Fresh ricotta paired with rich tomato sauce. 400 calories</p>
         <div class="quantity-controls">
-         <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
-          <input type="number" class="quantity" value="0" min="0" readonly />
+         <input type="number" class="quantity" value="0" min="0" readonly />
+          <button class="btn btn-add-to-cart" onclick="addToCart('Pomodoro Ricotta', 200)">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -228,177 +256,199 @@
         <p class="price">P 190.00</p>
         <p class="calories">Grilled sandwich with mozzarella and herbs. 350 calories</p>
         <div class="quantity-controls">
-         <button class="btn btn-sm btn-primary" onclick="incrementQuantity(this)">+</button>
-          <input type="number" class="quantity" value="0" min="0" readonly />
+         <input type="number" class="quantity" value="0" min="0" readonly />
+          <button class="btn btn-add-to-cart" onclick="addToCart('Lemon Garlic Pasta', 190)">Add to Cart</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
+<!-- Cart Icon -->
 <div class="cart-icon" data-bs-toggle="modal" data-bs-target="#cartModal">
-  <span id="cartEmoji" class="cart-emoji">🛒</span><span id="cartCount">0</span>
+  <span id="cartEmoji" class="cart-emoji">🛒</span>
+  <span id="cartCount">0</span>
 </div>
 
-  <!-- Product Modal -->
-  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="productModalLabel">Product</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img id="productImage" src="" class="img-fluid mb-3" alt="">
-          <p id="productDescription"></p>
-          <p id="productPrice"></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
-        </div>
+<!-- Product Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel">Product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="productImage" src="" class="img-fluid mb-3" alt="Product Image">
+        <p id="productDescription" class="text-muted"></p>
+        <p id="productPrice" class="fw-bold"></p>
+        <input id="modalQuantity" type="number" min="1" value="1" class="form-control mb-3">
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Cart Modal -->
-  <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Checkout</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h6>Order Summary</h6>
-          <ul id="cartItems" class="list-group mb-3"></ul>
-          <h6>Total: $<span id="cartTotal">0.00</span></h6>
-
-          <h6>Shipping Address</h6>
-          <input type="text" id="shippingAddress" class="form-control mb-3" placeholder="Enter your address">
-
-          <h6>Payment Method</h6>
-          <select class="form-control mb-3">
-            <option>Credit Card</option>
-            <option>Cash on Delivery</option>
-          </select>
-
-          <button class="btn btn-success" onclick="placeOrder()">Place Order</button>
-        </div>
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Checkout</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Order Summary -->
+        <ul id="checkoutList" class="list-group mb-3"></ul>
+        <p id="checkoutTotal" class="fw-bold">Total: P 0.00</p>
+        <!-- Place Order -->
+        <button class="btn btn-success w-100" onclick="clearCheckout()">Place Order</button>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-  // Function to handle incrementing quantity and cart count
-  function incrementQuantity(button) {
-    const quantityInput = button.parentElement.querySelector('.quantity');
-    let quantity = parseInt(quantityInput.value);
-    quantity += 1;
-    quantityInput.value = quantity;
 
-    updateCartEmoji();
-  }
-
-  // Function to update the cart emoji count
-  function updateCartEmoji() {
-    let totalItems = 0;
-    const quantities = document.querySelectorAll('.quantity');
-    
-    quantities.forEach(input => {
-      totalItems += parseInt(input.value);
-    });
-
-    const cartCount = document.getElementById('cartCount');
-    cartCount.textContent = totalItems;
-  }
-
-  // Function to show product details in the modal
-  function showProductModal(name, description, price, image) {
-    document.getElementById('productModalLabel').textContent = name;
-    document.getElementById('productDescription').textContent = description;
-    document.getElementById('productPrice').textContent = price;
-    document.getElementById('productImage').src = image;
-  }
-
-  // Function to add product to the cart
-  function addToCart() {
-    const productName = document.getElementById('productModalLabel').textContent;
-    const productPrice = document.getElementById('productPrice').textContent;
-    const cartItems = document.getElementById('cartItems');
-    
-    const listItem = document.createElement('li');
-    listItem.classList.add('list-group-item');
-    listItem.textContent = `${productName} - ${productPrice}`;
-
-    cartItems.appendChild(listItem);
-
-    updateCartEmoji();
-    $('#productModal').modal('hide'); // Hide the modal after adding to cart
-  }
-
-  // Function to place an order
-  function placeOrder() {
-    alert('Order placed successfully!');
-    document.getElementById('cartItems').innerHTML = ''; // Clear cart items
-    updateCartEmoji(); // Reset cart count
-    document.getElementById('shippingAddress').value = ''; // Clear shipping address
-  }
-
-
-  // Show the menu section
+  // Function to dynamically display menu items based on section ID
 function showMenuSection(sectionId) {
-  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-}
-
-// Increment quantity for menu items
-function incrementQuantity(button) {
-  const quantityInput = button.parentElement.querySelector('input');
-  quantityInput.value = parseInt(quantityInput.value) + 1;
-  updateCartCount();
-}
-
-// Show product details in a modal
-function showProductModal(name, description, price, image) {
-  document.getElementById('productModalLabel').textContent = name;
-  document.getElementById('productDescription').textContent = description;
-  document.getElementById('productPrice').textContent = price;
-  document.getElementById('productImage').src = image;
-  new bootstrap.Modal(document.getElementById('productModal')).show();
-}
-
-// Update the cart icon count
-function updateCartCount() {
-  const cartCount = document.getElementById('cartCount');
-  const allQuantities = document.querySelectorAll('.quantity');
-  let total = 0;
-  allQuantities.forEach(input => {
-    total += parseInt(input.value);
+  // Hide all sections
+  document.querySelectorAll(".menu-section").forEach((section) => {
+    section.style.display = "none";
   });
-  cartCount.textContent = total;
+
+  // Show the selected section
+  const targetSection = document.getElementById(sectionId);
+  if (targetSection) targetSection.style.display = "block";
 }
 
-// Add item to cart
+// Event Listener for menu links
+document.addEventListener("DOMContentLoaded", () => {
+  // Show default menu section
+  showMenuSection("Signature-Drinks");
+
+  // Add click event listeners to menu links
+  document.querySelectorAll(".menu-link").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const sectionId = link.getAttribute("href").substring(1);
+      showMenuSection(sectionId);
+    });
+  });
+});
+
+
+  // Variables
+let cart = [];
+let totalPrice = 0;
+let cartCount = 0;
+
+// Function to show the product modal
+function showProductModal(name, description, price, imagePath) {
+  document.getElementById("productModalLabel").textContent = name;
+  document.getElementById("productDescription").textContent = description;
+  document.getElementById("productPrice").textContent = `Price: P ${price.toFixed(2)}`;
+  document.getElementById("productImage").src = imagePath;
+  document.getElementById("modalQuantity").value = 1;
+
+  const modal = new bootstrap.Modal(document.getElementById("productModal"));
+  modal.show();
+}
+
+// Function to add items to the cart
 function addToCart() {
-  const productTitle = document.getElementById('productModalLabel').textContent;
-  const cartItemsList = document.getElementById('cartItems');
-  const newItem = document.createElement('li');
-  newItem.textContent = productTitle;
-  cartItemsList.appendChild(newItem);
-  updateCartCount();
+  const name = document.getElementById("productModalLabel").textContent;
+  const price = parseFloat(document.getElementById("productPrice").textContent.replace("Price: P ", ""));
+  const quantity = parseInt(document.getElementById("modalQuantity").value, 10);
+
+  if (!quantity || quantity < 1) {
+    alert("Please enter a valid quantity.");
+    return;
+  }
+
+  const itemTotal = price * quantity;
+  const existingItemIndex = cart.findIndex((item) => item.name === name);
+
+  if (existingItemIndex !== -1) {
+    cart[existingItemIndex].quantity += quantity;
+    cart[existingItemIndex].total += itemTotal;
+  } else {
+    cart.push({ name, price, quantity, total: itemTotal });
+  }
+
+  cartCount += quantity;
+  totalPrice += itemTotal;
+
+  updateCart();
 }
 
+// Function to update the cart
+function updateCart() {
+  const checkoutList = document.getElementById("checkoutList");
+  const checkoutTotal = document.getElementById("checkoutTotal");
+
+  document.getElementById("cartCount").textContent = cartCount;
+
+  // Clear and repopulate the checkout list
+  checkoutList.innerHTML = "";
+  cart.forEach((item, index) => {
+    const listItem = document.createElement("li");
+    listItem.className = "list-group-item d-flex justify-content-between align-items-center";
+    listItem.innerHTML = `
+      ${item.name} (x${item.quantity}) 
+      <span>P ${item.total.toFixed(2)}</span>
+      <button class="btn btn-sm btn-danger" onclick="removeItem(${index})">Remove</button>
+    `;
+    checkoutList.appendChild(listItem);
+  });
+
+  checkoutTotal.textContent = `Total: P ${totalPrice.toFixed(2)}`;
+}
+
+// Function to remove an item from the cart
+function removeItem(index) {
+  const removedItem = cart.splice(index, 1)[0];
+  cartCount -= removedItem.quantity;
+  totalPrice -= removedItem.total;
+
+  updateCart();
+}
+
+// Function to clear the cart
+function clearCheckout() {
+  if (cart.length === 0) {
+    alert("Your cart is empty.");
+    return;
+  }
+
+  alert("Your order has been submitted!");
+  cart = [];
+  totalPrice = 0;
+  cartCount = 0;
+
+  updateCart();
+}
+
+// Initialize quantity increment for menu items
+document.querySelectorAll(".menu-box").forEach((item) => {
+  const quantityInput = item.querySelector(".quantity");
+  item.querySelector("button").addEventListener("click", () => {
+    quantityInput.value = parseInt(quantityInput.value, 10) + 1;
+  });
+});
 </script>
 
-  <footer>
+ <footer>
     <div class="footer-cont">
       <p>&copy; 2024 HeyDay Cafe. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="script.js"></script>
 </body>
 </html>
