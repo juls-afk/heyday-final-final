@@ -302,14 +302,22 @@
       </div>
       <div class="modal-body">
         <!-- Order Summary -->
-        <ul id="checkoutList" class="list-group mb-3"></ul>
-        <p id="checkoutTotal" class="fw-bold">Total: P 0.00</p>
+        <ul id="checkoutList" class="list-group mb-"></ul>
+        <p id="checkoutTotal" class="fw-bold">Total:</p>
+
+        <!-- Address Input -->
+        <div class="mb-3">
+          <label for="customerAddress" class="form-label fw-bold">Delivery Address</label>
+          <input type="text" id="customerAddress" class="form-control" placeholder="Enter your address">
+        </div>
+
         <!-- Place Order -->
-        <button class="btn btn-success w-100" onclick="clearCheckout()">Place Order</button>
+        <button class="btn btn-success w-100" onclick="placeOrder()">Place Order</button>
       </div>
     </div>
   </div>
 </div>
+
 
 <script>
 
@@ -361,7 +369,8 @@ function showProductModal(name, description, price, imagePath) {
 // Function to add items to the cart
 function addToCart() {
   const name = document.getElementById("productModalLabel").textContent;
-  const price = parseFloat(document.getElementById("productPrice").textContent.replace("Price: P ", ""));
+  const priceText = document.getElementById("productPrice").textContent;
+  const price = parseFloat(priceText.replace(/[^\d.]/g, "")); 
   const quantity = parseInt(document.getElementById("modalQuantity").value, 10);
 
   if (!quantity || quantity < 1) {
@@ -388,7 +397,8 @@ function addToCart() {
 // Function to update the cart
 function updateCart() {
   const checkoutList = document.getElementById("checkoutList");
-  const checkoutTotal = document.getElementById("checkoutTotal");
+  checkoutTotal.textContent = `Total: P ${totalPrice.toFixed(2)}`;
+
 
   document.getElementById("cartCount").textContent = cartCount;
 
@@ -439,6 +449,8 @@ document.querySelectorAll(".menu-box").forEach((item) => {
     quantityInput.value = parseInt(quantityInput.value, 10) + 1;
   });
 });
+
+
 </script>
 
  <footer>
