@@ -85,6 +85,24 @@ msg.addEventListener("keyup", (event) => {
   console.log(event.target.value);
 });
 
+//Hamburger Icon
+const navbarToggle = document.getElementById("navbar-toggle");
+const navLinks = document.querySelector(".nav-links");
+const body = document.querySelector("body");
+
+navbarToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+body.addEventListener("click", (event) => {
+  if (
+    !navLinks.contains(event.target) &&
+    !navbarToggle.contains(event.target)
+  ) {
+    navLinks.classList.remove("active");
+  }
+});
+
 // Menu Section
 // Function to show the selected section and hide others
 function showSection(sectionId) {
