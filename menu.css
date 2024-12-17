@@ -16,6 +16,15 @@ header {
     background-color: rgba(127, 79, 36, 0.1);
 }
 
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
 /* Hero Section */
 .hero-section {
     background-image: url(img/check.jpg);
@@ -123,37 +132,26 @@ header {
 
 .menu-section .menu-box {
     text-align: center;
-    margin: 20px auto; /* Added margin for spacing */
+    margin: 20px auto;
     padding: 15px;
     transition: transform 0.3s;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
 }
 
-.menu-section .menu-box:hover {
-    transform: scale(1.05);
-}
-
-.menu-link {
-    margin: 0 15px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
-}
-
-.menu-link:hover {
-    text-decoration: underline;
-}
-
-/* Menu List */
 .menu-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px 0;
     width: 100%;
+    padding: 20px 0;
 }
 
-/* Individual Menu Item */
 .menu-list a {
     display: block;
     padding: 12px 24px;
@@ -167,7 +165,7 @@ header {
     background-color: #fff;
     transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
     min-width: 120px;
-    justify-content: center;
+    width: auto;
     box-sizing: border-box;
 }
 
@@ -179,8 +177,23 @@ header {
     transform: translateY(-2px);
 }
 
+.menu-link {
+    margin: 0 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu-link:hover {
+    text-decoration: underline;
+}
+
 /* Menu Box */
 .menu-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 15px;
@@ -189,6 +202,8 @@ header {
     background-color: #fff;
     max-width: 250px;
     width: 100%;
+    display: block;
+    margin: 5px 0;
 }
 
 .menu-box:hover {
@@ -225,6 +240,7 @@ header {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-left: 1px;
 }
 
 .quantity-controls button:hover {
@@ -281,7 +297,7 @@ footer p {
 /* Cart Icon */
 .cart-icon {
     position: fixed;
-    top: 20px;
+    top: 90px;
     right: 20px;
     background-color: #fff;
     border-radius: 50%;
@@ -305,3 +321,155 @@ footer p {
     padding: 2px 6px;
 }
 
+/* Cart Modal */
+.cart-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cart-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-modal-content h2, .cart-modal-content h3, .cart-modal-content h4 {
+  margin: 10px 0;
+}
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.address-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#placeOrderBtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#placeOrderBtn:hover {
+  background-color: #45a049;
+}
+
+/* Order Summary Styles */
+#orderSummary {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#checkoutList {
+  margin-bottom: 15px;
+}
+
+#checkoutList li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+#checkoutTotal {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+button {
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+button.btn-danger {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+button.btn-success {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Form Section */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  font-size: 14px;
+  padding: 10px;
+}
+
+select.form-control {
+  font-size: 14px;
+  padding: 10px;
+}
+
+/* Buttons */
+button {
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+button.btn-danger {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+button.btn-success {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Make the product cards stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .menu-box {
+    margin-bottom: 15px;
+  }
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
